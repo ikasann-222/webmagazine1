@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# TODO: example.com を公開先のドメインに置き換える
-Sitemap: https://example.com/sitemap.xml
