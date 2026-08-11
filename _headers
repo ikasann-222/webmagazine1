@@ -1,0 +1,20 @@
+# Netlify / Cloudflare Pages 用のセキュリティヘッダー設定ファイル。
+# このファイルをサイトのルートに置くだけで、配信時にヘッダーが付く。
+# （GitHub Pages はヘッダーを設定できないため、この機能は使えない）
+
+/*
+  # クリックジャッキング対策：他サイトの iframe に埋め込ませない
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  # ブラウザに MIME タイプの推測をさせない
+  X-Content-Type-Options: nosniff
+  # 外部サイトへ渡すリファラを最小限に
+  Referrer-Policy: strict-origin-when-cross-origin
+  # 使わない機能は明示的に禁止しておく
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  # 常に HTTPS で来させる（独自ドメインが安定してから有効化することを推奨）
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/assets/*
+  # 画像・CSS は長期キャッシュ（更新時はファイル名を変える）
+  Cache-Control: public, max-age=604800

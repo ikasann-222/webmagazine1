@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ぬすみぎき｜隠れたすごい人を発掘するWebマガジン</title>
+  <meta name="description" content="「ぬすみぎき」は、まだ知られていない人の話をそっと聞かせてもらうWebマガジンです。神山で暮らす人たちのインタビューを届けます。">
+
+  <!-- セキュリティ：このページが読み込んでよいものを自分自身に限定する。
+       JavaScript は使っていないので script-src は none にしている。
+       ※ frame-ancestors は meta では効かないため、vercel.json 側で指定している。 -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- SNS でシェアされたときの見え方（TODO: example.com を公開先のドメインに置き換える） -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ぬすみぎき｜隠れたすごい人を発掘するWebマガジン">
+  <meta property="og:description" content="まだ知られていない人の話をそっと聞かせてもらうWebマガジン。">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/img/article-001-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <header class="site-header">
+    <!-- トップページはすぐ下に大きなサイト名が出るので、ヘッダーはメニューだけ -->
+    <div class="container site-header__inner site-header__inner--end">
+      <nav class="nav" aria-label="メインメニュー">
+        <details>
+          <summary class="nav__toggle" aria-label="メニューを開く">
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+          </summary>
+          <ul class="nav__list">
+            <li><a href="/">ホーム</a></li>
+            <li><a href="#about">このマガジンについて</a></li>
+            <li><a href="/articles/001-jinsei-no-erabikata/">第1回 人生の選び方</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ヒーロー：サイト名 -->
+    <div class="hero">
+      <h1 class="logo">ぬすみぎき</h1>
+    </div>
+
+    <!-- おすすめの記事 -->
+    <section class="featured container" aria-labelledby="featured-title">
+      <span class="decor decor--circle" aria-hidden="true"></span>
+      <span class="decor decor--mountain" aria-hidden="true">
+        <img src="/assets/icons/mountain-front.svg" alt="" width="216" height="196">
+        <img src="/assets/icons/mountain-back.svg" alt="" width="216" height="160">
+      </span>
+
+      <div class="card">
+        <h2 class="section-title" id="featured-title">おすすめの記事</h2>
+
+        <article class="article-card article-card__link-wrap">
+          <img class="article-card__image"
+               src="/assets/img/article-001-cover.jpg"
+               alt="窓辺で笑顔を見せる桑原菜穂さん"
+               width="402" height="302" loading="lazy" decoding="async">
+          <div>
+            <p class="article-card__number">第1回</p>
+            <h3 class="article-card__title">
+              <a href="/articles/001-jinsei-no-erabikata/">人生の選び方</a>
+            </h3>
+            <p class="article-card__byline">— 桑原菜穂さん</p>
+          </div>
+        </article>
+
+        <p class="featured__more">
+          <img src="/assets/icons/more.svg" alt="" width="32" height="32">
+        </p>
+      </div>
+    </section>
+
+    <!-- 装飾のドット列 -->
+    <div class="dot-divider" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span>
+    </div>
+
+    <!-- このマガジンについて -->
+    <section class="about container" id="about" aria-labelledby="about-title">
+      <h2 class="about__label" id="about-title">このマガジンについて</h2>
+
+      <div class="about__body">
+        <div class="about__gallery">
+          <img src="/assets/img/about-01.jpg" alt="取材の様子" width="236" height="157" loading="lazy" decoding="async">
+          <img src="/assets/img/about-02.jpg" alt="話を聞いているところ" width="134" height="135" loading="lazy" decoding="async">
+          <img src="/assets/img/about-03.jpg" alt="収録に使った部屋" width="319" height="213" loading="lazy" decoding="async">
+        </div>
+
+        <div class="about__text">
+          <p class="about__lead">隠れたすごい人を発掘するメディアです。</p>
+          <p>とても面白い記事第一号を公開しました。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- カテゴリ -->
+    <section class="categories container" aria-labelledby="categories-title">
+      <h2 class="section-title" id="categories-title">カテゴリから探す</h2>
+      <ul class="category-list">
+        <li><a href="/articles/001-jinsei-no-erabikata/">男性起業家</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="logo">ぬすみぎき</p>
+        <p class="site-footer__tagline">隠れたすごい人を発掘するメディアです。</p>
+      </div>
+
+      <!-- TODO: href を実際のアカウント URL に置き換える -->
+      <ul class="social">
+        <li>
+          <a href="https://www.instagram.com/" rel="me noopener noreferrer" target="_blank">
+            <img src="/assets/icons/instagram.svg" alt="Instagram" width="32" height="32">
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/" rel="me noopener noreferrer" target="_blank">
+            <img src="/assets/icons/x.svg" alt="X（旧Twitter）" width="32" height="32">
+          </a>
+        </li>
+      </ul>
+
+      <p class="site-footer__copyright">&copy; 2026 ぬすみぎき</p>
+    </div>
+  </footer>
+</body>
+</html>
